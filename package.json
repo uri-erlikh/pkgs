@@ -1,0 +1,15 @@
+{
+   "name": "package",
+   "version": "1.0.0",
+   "author": "Uri Erlikh",
+   "repository": {
+      "type": "git",
+      "url": "git@https://github.com/uri-erlikh/pkgs/new/main"
+   },
+   "dependencies": {
+      "axios": "^0.16.0",           
+      "angular": ">1.5.3"           
+      "electron-packager": "~5.2.0" 
+      "dojo": "<1.9.3"              
+   }
+}
