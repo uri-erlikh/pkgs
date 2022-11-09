@@ -8,8 +8,8 @@
    },
    "dependencies": {
       "axios": "^0.16.0",           
-      "angular": ">1.5.3"           
-      "electron-packager": "~5.2.0" 
+      "angular": ">1.5.3",          
+      "electron-packager": "~5.2.0", 
       "dojo": "<1.9.3"              
    }
 }
