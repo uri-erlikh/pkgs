@@ -4,4 +4,4 @@ export default connect(
     state => ({
         scan: state.Scan.scan,
         translate: getTranslate(state.localize)
-    }), {getScanVerdict, getScansSummary, actionAllowed})(Project);
+    }), {getFunc, actionAllowed})(Project);
