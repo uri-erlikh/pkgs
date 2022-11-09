@@ -11,5 +11,31 @@
       "angular": ">1.5.3",          
       "electron-packager": "~5.2.0", 
       "dojo": "<1.9.3"              
+   },
+   "resolutions": {
+   "//": "See https://github.com/facebook/create-react-app/issues/11773",
+   "react-error-overlay": "6.0.9"
+   },
+   "scripts": {
+      "unit-test": "exit 0",
+      "test": "NODE_ENV='test' jest",
+      "start": "NODE_ENV='development' node config/config.dev.js",
+      "standalone": "SET NODE_ENV='development' & SET STANDALONE=true & node config/config.dev.js",
+      "copy": "rm -rf build && cp -R public build",
+      "copyWin": "del /S /Q build && xcopy /E public build",
+      "build": "npm run copy && node config/config.prod.js && ls -lhS build",
+      "buildWin": "npm run copyWin && node config/config.prod.js",
+      "comp": "node config/spawn.js components",
+      "cont": "node config/spawn.js containers",
+      "reset": "npm run clear && npm i",
+      "clean": "rm -rf ./node_modules && rm -rf build",
+      "clear": "rm -rf node_modules package-lock.json",
+      "optimize": "npm prune && npm dedupe && npm outdated",
+      "start-win": "set NODE_ENV='development' && node config/config.dev.js",
+      "zip": "rm -rf ./build/*.zip && zip ./build/bundle.zip ./build/main.js",
+      "dev:publish": "node scripts/cloudinfra/publish.dev.js",
+      "stg:publish": "node scripts/cloudinfra/publish.stg.js",
+      "prod:publish": "node scripts/cloudinfra/publish.prod.js",
+      "preinstall": "npx npm-force-resolutions"
    }
 }
